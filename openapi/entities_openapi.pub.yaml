@@ -33,14 +33,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: 'entities_openapi.pub.yaml#/components/schemas/Entity'
+              $ref: 'entities_openapi_model.gen.yaml#/components/schemas/Entity'
       responses:
         '200': 
           description: The request was valid and accepted.
           content:
             application/json:
               schema:
-                $ref: 'entities_openapi.pub.yaml#/components/schemas/Entity'
+                $ref: 'entities_openapi_model.gen.yaml#/components/schemas/Entity'
         '400':
           $ref: '#/components/responses/BadRequest'
         '401':
@@ -64,7 +64,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'entities_openapi.pub.yaml#/components/schemas/Entity'
+                $ref: 'entities_openapi_model.gen.yaml#/components/schemas/Entity'
         '400':
           $ref: '#/components/responses/BadRequest'
         '401':
@@ -111,7 +111,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'entities_openapi.pub.yaml#/components/schemas/Entity'
+                $ref: 'entities_openapi_model.gen.yaml#/components/schemas/Entity'
         '400':
           $ref: '#/components/responses/BadRequest'
         '401':
@@ -145,7 +145,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: 'entities_openapi.pub.yaml#/components/schemas/Entity'
+                $ref: 'entities_openapi_model.gen.yaml#/components/schemas/Entity'
         '400':
           $ref: '#/components/responses/BadRequest'
         '401':
@@ -256,12 +256,12 @@ components:
             The entity containing the overridden fields. The service will extract the overridable fields from 
             the object and ignore all other fields.
           allOf:
-            - $ref: 'entities_openapi.pub.yaml#/components/schemas/Entity'
+            - $ref: 'entities_openapi_model.gen.yaml#/components/schemas/Entity'
         provenance:
           description: |-
             Additional information about the source of the override.
           allOf:
-            - $ref: 'entities_openapi.pub.yaml#/components/schemas/Provenance'
+            - $ref: 'entities_openapi_model.gen.yaml#/components/schemas/Provenance'
     EntityEventRequest:
       type: object
       properties:
@@ -282,7 +282,7 @@ components:
         entityEvents:
           type: array
           items:
-            $ref: 'entities_openapi.pub.yaml#/components/schemas/EntityEvent'
+            $ref: 'entities_openapi_model.gen.yaml#/components/schemas/EntityEvent'
 tags:
   - name: entity
     description: The Entities API
