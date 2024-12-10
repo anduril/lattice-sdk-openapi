@@ -19,7 +19,7 @@ paths:
     put:
       tags:
         - entity
-      summary: Create or update an entity.
+      summary: Create or update an entity
       description: |-
         Publish an entity for ingest into the Entities API. Entities created with this method are "owned" by the originator: other sources, 
         such as the UI, may not edit or delete these entities. The server validates entities at API call time and 
@@ -49,7 +49,7 @@ paths:
     get:
       tags:
         - entity
-      summary: Get the content of an entity.
+      summary: Get the content of an entity
       operationId: getEntityById
       parameters:
         - name: entityId
@@ -75,7 +75,7 @@ paths:
     put:
       tags:
         - entity
-      summary: Override an entity component with user-provided values.
+      summary: Override an entity component
       description: |-
         Only fields marked with overridable can be overridden. Please refer to our documentation to see the comprehensive
         list of fields that can be overridden. The entity in the request body should only have a value set on the field 
@@ -121,7 +121,7 @@ paths:
     delete:
       tags:
         - entity
-      summary: Remove an entity override.
+      summary: Remove an entity override
       description: |-
         This operation clears the override value from the specified field path on the entity.
       operationId: removeEntityOverrideRest
@@ -156,7 +156,7 @@ paths:
     post:
       tags:
         - entity
-      summary: Retrieve batches of entity events in real-time.
+      summary: Retrieve batches of entity events in real-time
       description: |-
         This is a long polling API that will first return all preexisting data and then return all new data as
         it becomes available. If you want to start a new polling session then open a request with an empty
