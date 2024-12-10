@@ -578,7 +578,7 @@ components:
                 ontology:
                     allOf:
                         - $ref: '#/components/schemas/Ontology'
-                    description: A standardized representation of the entity.
+                    description: Ontology defines an entity's categorization in Lattice, and improves data retrieval and integration. Builds a standardized representation of the entity.
                 sensors:
                     allOf:
                         - $ref: '#/components/schemas/Sensors'
@@ -2275,8 +2275,7 @@ components:
             properties:
                 taskSpecificationUrl:
                     type: string
-                displayName:
-                    type: string
+                    description: Url path must be prefixed with `type.googleapis.com/`.
             description: Defines a supported task by the task specification URL of its "Any" type.
         TaskEntity:
             type: object
